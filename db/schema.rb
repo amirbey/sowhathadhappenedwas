@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140209001718) do
+ActiveRecord::Schema.define(:version => 20140209022431) do
 
   create_table "decisions", :force => true do |t|
     t.string   "decision"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20140209001718) do
     t.integer  "edu"
     t.integer  "xcurr"
     t.integer  "friends"
-    t.text     "swwhw"
+    t.text     "swhhw"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
