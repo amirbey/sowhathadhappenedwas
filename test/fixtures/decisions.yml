@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  decision: MyString
+  mom: 
+  edu: 
+  xcurr: 
+  friends: 
+  swwhw: MyText
+
+two:
+  decision: MyString
+  mom: 
+  edu: 
+  xcurr: 
+  friends: 
+  swwhw: MyText

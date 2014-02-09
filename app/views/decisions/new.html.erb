@@ -1,0 +1,36 @@
+<h1>New Decision</h1>
+<%= form_for :decision, url: decisions_path do |f| %>
+  <p>
+    <%= f.label :decision %><br>
+    <%= f.text_field :decision %>
+  </p>
+ 
+  <p>
+    <%= f.label :mom %><br>
+    <%= f.text_field :mom %>
+  </p>
+ 
+ <p>
+    <%= f.label :edu %><br>
+    <%= f.text_field :edu %>
+  </p>
+
+  <p>
+    <%= f.label :xcurr %><br>
+    <%= f.text_field :xcurr %>
+  </p>
+
+  <p>
+    <%= f.label :friends %><br>
+    <%= f.text_field :friends %>
+  </p>
+
+  <p>
+    <%= f.label :swhhw %><br>
+    <%= f.text_area :swhhw %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
