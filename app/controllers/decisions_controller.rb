@@ -1,6 +1,6 @@
 class DecisionsController < ApplicationController
 	def index
-		@decisions = Decision.all
+		@decisions = Decision.order(:updated_at)
 		respond_to do |format|
 	        format.html
 	        format.json { render :json => @decisions }
@@ -27,5 +27,18 @@ class DecisionsController < ApplicationController
 	        format.html
 	        format.json { render :json => @decision }
       	end
+	end
+
+	def totals
+		@totals = {:mom => Decision.sum(:mom), :friends => Decision.sum(:friends), :xcurr => Decision.sum(:xcurr), :edu => Decision.sum(:edu)}
+
+		respond_to do |format|
+	        format.html
+	        format.json { render :json => @totals }
+      	end
+	end
+
+	def reset
+		Decision.destroy_all
 	end
 end

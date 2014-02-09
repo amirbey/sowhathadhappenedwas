@@ -3,7 +3,9 @@ Swhhw::Application.routes.draw do
 
   get "decisions/index"
 
-  get "comments/index"
+  get "decisions/totals"
+
+  get "decisions/reset"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -19,6 +21,8 @@ Swhhw::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
     resources :decisions
+    match "decisions/totals" => "decisions#totals"
+    match "decisions/reset" => "decisions#reset"
   # Sample resource route with options:
   #   resources :products do
   #     member do
