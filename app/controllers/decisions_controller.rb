@@ -12,7 +12,7 @@ class DecisionsController < ApplicationController
 		if request.method == "POST"
 			@decision = Decision.new(params[:decision])#(:decision => params[:decision][:decision], :mom => params[:decision][:mom], )
 		else
-			@decision = Decision.new(:decision => params[:decision])
+			@decision = Decision.new(:decision => params[:decision], :mom => params[:mom], :edu => params[:edu], :friends => params[:friends], :swhhw => params[:swhhw])
 		end
 		@decision.save
 		redirect_to @decision
@@ -39,6 +39,6 @@ class DecisionsController < ApplicationController
 	end
 
 	def reset
-		Decision.destroy_all
+		Decision.destroa
 	end
 end
